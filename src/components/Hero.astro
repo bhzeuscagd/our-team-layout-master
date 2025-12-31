@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import imgpurple from "../assets/resources/person_1.png";
+import imgpink from "../assets/resources/person_2.png";
+import imgblue from "../assets/resources/person_3.png";
+import imgmelocotone from "../assets/resources/person_4.png";
+import imgceleste from "../assets/resources/person_5.png";
+import BentoItem from "./BentoItem.astro";
+---
+
+<section class="min-h-screen">
+    <div
+        class="grid
+        grid-cols-4
+        grid-rows-2
+        gap-0
+        place-items-stretch
+        m-16
+        h-screen
+        bg-bg
+        rounded-4xl
+        overflow-hidden"
+    >
+        <div class="bg-bg col-span-2">1</div>
+
+        <BentoItem src={imgpurple} class="bg-purple col-start-3" />
+
+        <BentoItem src={imgpink} class="bg-pink col-start-4" />
+
+        <div class="bg-bg row-start-2">4</div>
+        <BentoItem src={imgblue} class="bg-blue row-start-2" />
+        <BentoItem src={imgmelocotone} class="bg-melocotone row-start-2" />
+        <BentoItem src={imgceleste} class="bg-celeste row-start-2" />
+    </div>
+</section>

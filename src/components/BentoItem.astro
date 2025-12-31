@@ -1,0 +1,7 @@
+---
+const { src, class: className } = Astro.props;
+---
+
+<div class={`flex flex-col justify-end ${className}`}>
+    <img src={src.src} alt="" class="w-full object-cover block" />
+</div>
