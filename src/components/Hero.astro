@@ -6,6 +6,8 @@ import imgblue from "../assets/resources/person_3.png";
 import imgmelocotone from "../assets/resources/person_4.png";
 import imgceleste from "../assets/resources/person_5.png";
 import BentoItem from "./BentoItem.astro";
+import arrow from "../assets/resources/arrow up right.svg";
+import decoration from "../assets/resources/Background_decor.svg";
 ---
 
 <section class="min-h-screen">
@@ -21,15 +23,58 @@ import BentoItem from "./BentoItem.astro";
         rounded-4xl
         overflow-hidden"
     >
-        <div class="bg-bg col-span-2">1</div>
+        <Image
+            src={decoration}
+            alt="decoration"
+            class="absolute top-0 left-0 h-full w-2xs z-0"
+        />
+        <div class="bg-bg col-span-2 flex flex-col align-start m-10 gap-4">
+            <p class="text-blue-900 z-10">Our team</p>
+            <h1 class="text-4xl font-bold z-10">Meet Our Team</h1>
+            <p class="text-sm z-10">
+                Our team is made up of the best talent in the industry. We are
+                passionate about what we do and we are dedicated to providing
+                the best possible service to our clients.
+            </p>
+        </div>
 
-        <BentoItem src={imgpurple} class="bg-purple col-start-3" />
+        <BentoItem
+            src={imgpurple}
+            class="bg-purple col-start-3"
+            name="Liam Novak"
+            job="Software Engineer"
+        />
 
-        <BentoItem src={imgpink} class="bg-pink col-start-4" />
+        <BentoItem
+            src={imgpink}
+            class="bg-pink col-start-4"
+            name="Sophia Moretti"
+            job="Business Developer Manager"
+        />
 
-        <div class="bg-bg row-start-2">4</div>
-        <BentoItem src={imgblue} class="bg-blue row-start-2" />
-        <BentoItem src={imgmelocotone} class="bg-melocotone row-start-2" />
-        <BentoItem src={imgceleste} class="bg-celeste row-start-2" />
+        <div
+            class="bg-bg row-start-2 flex flex-row items-end justify-start gap-2 m-6"
+        >
+            <span class="text-sm">See all members</span>
+            <Image src={arrow} alt="arrow" />
+        </div>
+        <BentoItem
+            src={imgblue}
+            class="bg-blue row-start-2"
+            name="Ethan Rossi"
+            job="Business Developer Manager"
+        />
+        <BentoItem
+            src={imgmelocotone}
+            class="bg-melocotone row-start-2"
+            name="Isabella Ricci"
+            job="UX Designer"
+        />
+        <BentoItem
+            src={imgceleste}
+            class="bg-celeste row-start-2"
+            name="Noah Conti"
+            job="Content Creator"
+        />
     </div>
 </section>
